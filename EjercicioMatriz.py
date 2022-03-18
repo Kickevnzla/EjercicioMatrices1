@@ -4,13 +4,13 @@ from termcolor import colored
 
 initialData = []
 
-width = 5
-height = 5
+width = int(input('Ingrese ancho de matriz: '))
+height = int(input('Ingrese alto de matriz: '))
 
 for i in range(width * height):
     initialData.append(rnd.randint(1, 5))
 
-matrix1 = np.reshape(initialData, (width, height), order="C")
+matrix1 = np.reshape(initialData, (height, width), order="C")
 
 finalData = [None for i in range(len(initialData))]
 
@@ -125,7 +125,7 @@ for i in range(len(initialData)):
         else:
             finalData[i] = 0
 
-matrix2 = np.reshape(finalData, (width, height), order="C")
+matrix2 = np.reshape(finalData, (height, width), order="C")
 
 for i in range(height):
     print(colored(matrix1[i, :], 'cyan'), '\t',
