@@ -29,14 +29,14 @@ def isTopRigthItem(i):
         return False
 
 
-def isButtomLeftItem(i):
+def isBottomLeftItem(i):
     if i == len(initialData) - width:
         return True
     else:
         return False
 
 
-def isButtomRigthItem(i):
+def isBottomRigthItem(i):
     if i == len(initialData) - 1:
         return True
     else:
@@ -51,28 +51,28 @@ def isTopRow(i):
 
 
 def isLeftColumn(i):
-    if isTopLeftItem(i) is False and isButtomLeftItem(i) is False and i % width == 0:
+    if isTopLeftItem(i) is False and isBottomLeftItem(i) is False and i % width == 0:
         return True
     else:
         return False
 
 
 def isRigthColumn(i):
-    if isTopRigthItem(i) is False and isButtomRigthItem(i) is False and (i + 1) % width == 0:
+    if isTopRigthItem(i) is False and isBottomRigthItem(i) is False and (i + 1) % width == 0:
         return True
     else:
         return False
 
 
-def isButtomRow(i):
-    if isButtomLeftItem(i) is False and isButtomRigthItem(i) is False and i >= len(initialData) - width and i < len(initialData):
+def isBottomRow(i):
+    if isBottomLeftItem(i) is False and isBottomRigthItem(i) is False and i >= len(initialData) - width and i < len(initialData):
         return True
     else:
         return False
 
 
 def isCenterItem(i):
-    if (i > 0 and i < len(initialData) - 1 and isTopLeftItem(i) is False and isTopRow(i) is False and isTopRigthItem(i) is False and isLeftColumn(i) is False and isRigthColumn(i) is False and isButtomLeftItem(i) is False and isButtomRow(i) is False and isButtomLeftItem(i) is False):
+    if (i > 0 and i < len(initialData) - 1 and isTopLeftItem(i) is False and isTopRow(i) is False and isTopRigthItem(i) is False and isLeftColumn(i) is False and isRigthColumn(i) is False and isBottomLeftItem(i) is False and isBottomRow(i) is False and isBottomLeftItem(i) is False):
         return True
     else:
         return False
@@ -104,17 +104,17 @@ for i in range(len(initialData)):
             finalData[i] = 1
         else:
             finalData[i] = 0
-    if isButtomLeftItem(i):
+    if isBottomLeftItem(i):
         if initialData[i] == initialData[i + 1] or initialData[i] == initialData[len(initialData) - (width * 2)]:
             finalData[i] = 1
         else:
             finalData[i] = 0
-    if isButtomRow(i):
+    if isBottomRow(i):
         if initialData[i] == initialData[i - width] or initialData[i] == initialData[i - 1] or initialData[i] == initialData[i + 1]:
             finalData[i] = 1
         else:
             finalData[i] = 0
-    if isButtomRigthItem(i):
+    if isBottomRigthItem(i):
         if initialData[i] == initialData[i - 1] or initialData[i] == initialData[i - width]:
             finalData[i] = 1
         else:
