@@ -4,7 +4,7 @@
 
 ### Requirement
 
-- Python [Download](https://www.python.org/downloads/)
+- Python3 [Download](https://www.python.org/downloads/)
 
 ### Build and Development
 
@@ -17,7 +17,7 @@ git clone https://github.com/Kickevnzla/EjercicioMatrices1.git
 - Ejecutar el script
   
 ```bash
-python EjercicioMatriz.py
+python3 EjercicioMatriz.py
 ```
 
 #### Install Packages
@@ -27,7 +27,7 @@ python EjercicioMatriz.py
 - Instalar NumPy
 
 ```bash
-pip install numpy
+pip3 install numpy
 ```
 
 ##### TermColor
@@ -35,5 +35,5 @@ pip install numpy
 - Instalar TermColor
 
 ```bash
-pip install termcolor
+pip3 install termcolor
 ```
